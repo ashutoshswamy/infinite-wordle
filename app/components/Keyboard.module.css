@@ -29,10 +29,25 @@
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .key {
-    height: 50px;
+    height: 52px;
     font-size: 0.9rem;
+    border-radius: 3px;
+  }
+}
+
+@media (max-width: 360px) {
+  .keyboard {
+    gap: 5px;
+    padding: 0 4px;
+  }
+  .row {
+    gap: 4px;
+  }
+  .key {
+    height: 48px;
+    font-size: 0.8rem;
   }
 }
 .keyNormal {

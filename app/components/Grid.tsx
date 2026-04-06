@@ -27,7 +27,7 @@ export default function Grid({
   const tileSize = wordLength > 6 ? '50px' : wordLength > 5 ? '56px' : '62px';
 
   return (
-    <div className={styles.grid} style={{ '--tile-size': tileSize } as React.CSSProperties}>
+    <div className={styles.grid} style={{ '--tile-size': tileSize, '--word-length': wordLength } as React.CSSProperties}>
       {guesses.map((guess, i) => (
         <CompletedRow
           key={i}

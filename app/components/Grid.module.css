@@ -16,16 +16,29 @@
   perspective: 1000px;
 }
 .tile {
-  width: var(--tile-size, 62px);
-  height: var(--tile-size, 62px);
+  --size: var(--tile-size, 62px);
+  /* Ensure 8 tiles fit on a 320px screen with gaps */
+  --max-mobile-size: calc((100vw - 48px) / var(--word-length, 5));
+  
+  width: clamp(32px, var(--size), var(--max-mobile-size));
+  height: clamp(32px, var(--size), var(--max-mobile-size));
+  
   border: 2px solid var(--surface-border);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  
+  /* Font size scales with tile size */
+  font-size: clamp(1rem, calc(var(--tile-size) * 0.5), 2rem);
   font-weight: 700;
   text-transform: uppercase;
   transition: border-color var(--transition-fast);
+}
+
+@media (max-width: 480px) {
+  .tile {
+    border-width: 1.5px;
+  }
 }
 .tileFilled {
   border-color: var(--key-bg);

@@ -14,12 +14,21 @@
 }
 .modal {
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
   border-radius: 16px;
-  padding: 24px;
+  padding: 32px 24px;
   position: relative;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 32px 16px 24px;
+    border-radius: 12px;
+  }
 }
 .closeButton {
   position: absolute;
