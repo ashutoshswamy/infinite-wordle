@@ -1,26 +1,80 @@
-@import "tailwindcss";
+@import url('https://api.fontshare.com/v2/css?f[]=clash-grotesk@200,300,400,500,600,700&display=swap');
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --bg: #fafafa;
+  --fg: #111111;
+  --surface: #ffffff;
+  --surface-border: #e0e0e0;
+  
+  --primary: #538d4e;
+  --primary-hover: #457840;
+  
+  --correct: #538d4e;
+  --present: #b59f3b;
+  --absent: #787c7e;
+  
+  --key-bg: #d3d6da;
+  --key-fg: #111111;
+  --key-hover: #c0c3c8;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #121213;
+    --fg: #ffffff;
+    --surface: #1e1e1e;
+    --surface-border: #3a3a3c;
+    
+    --correct: #538d4e;
+    --present: #b59f3b;
+    --absent: #3a3a3c;
+
+    --key-bg: #818384;
+    --key-fg: #ffffff;
+    --key-hover: #6a6c6d;
   }
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Clash Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Utilities */
+.glass-panel {
+  background: rgba(var(--surface), 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(var(--surface-border), 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }

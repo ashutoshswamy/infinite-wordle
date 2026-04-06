@@ -1,0 +1,47 @@
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 6px;
+  width: 100%;
+  padding: 1rem;
+}
+.row {
+  display: flex;
+  gap: 6px;
+}
+.tileWrapper {
+  perspective: 1000px;
+}
+.tile {
+  width: var(--tile-size, 62px);
+  height: var(--tile-size, 62px);
+  border: 2px solid var(--surface-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: border-color var(--transition-fast);
+}
+.tileFilled {
+  border-color: var(--key-bg);
+  animation: popIn 0.1s;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

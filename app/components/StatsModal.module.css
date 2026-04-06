@@ -1,0 +1,51 @@
+.statsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.statLabel {
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0.8;
+}
+.gameOverSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(var(--surface-border), 0.5);
+}
+.resultText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.targetWord {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+.nextButton {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color var(--transition-fast);
+}
+.nextButton:hover {
+  background-color: var(--primary-hover);
+}

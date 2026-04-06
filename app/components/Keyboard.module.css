@@ -1,0 +1,56 @@
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 8px;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+.key {
+  height: 58px;
+  border-radius: 4px;
+  background-color: var(--key-bg);
+  color: var(--key-fg);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  user-select: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (max-width: 400px) {
+  .key {
+    height: 50px;
+    font-size: 0.9rem;
+  }
+}
+.keyNormal {
+  flex: 1;
+}
+.keyLarge {
+  flex: 1.5;
+  font-size: 0.85rem;
+}
+.correct {
+  background-color: var(--correct) !important;
+  color: #fff !important;
+}
+.present {
+  background-color: var(--present) !important;
+  color: #fff !important;
+}
+.absent {
+  background-color: var(--absent) !important;
+  color: #fff !important;
+}
