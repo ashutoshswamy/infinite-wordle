@@ -1,6 +1,8 @@
 # Infinite Wordle
 
-A premium, endless Wordle clone built with **Next.js**, **Framer Motion**, and **Clash Grotesk**. Play as many words as you want, anytime!
+A premium, endless Wordle clone built with **Next.js**, **Framer Motion**, and **DM Sans**. Play as many words as you want, anytime!
+
+🔗 Live: [infinitewordle.ashutoshswamy.in](https://infinitewordle.ashutoshswamy.in)
 
 ## ✨ Features
 
@@ -10,13 +12,14 @@ A premium, endless Wordle clone built with **Next.js**, **Framer Motion**, and *
 - **Premium Design**: Sleek, glassmorphic UI with smooth 3D flip animations and custom typography.
 - **Global Stats**: Track your wins, streaks, and performance across all sessions (persisted locally).
 - **Responsive & Accessible**: Works perfectly on mobile and desktop with intuitive keyboard support.
+- **SEO Optimized**: Full Open Graph/Twitter metadata, JSON-LD structured data, `robots.txt`, and `sitemap.xml`.
 
 ## 🚀 Tech Stack
 
 - **Framework**: [Next.js](https://nextjs.org/) (App Router)
 - **Styling**: Vanilla CSS with CSS Modules
 - **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Typography**: [Clash Grotesk](https://fontshare.com/) via Fontshare
+- **Typography**: [DM Sans](https://fonts.google.com/specimen/DM+Sans) via `next/font`
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Dictionary**: `an-array-of-english-words`
 
@@ -39,6 +42,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to start p
 ## 👨‍💻 Developed By
 
 **Ashutosh Swamy**
+- Portfolio: [ashutoshswamy.in](https://ashutoshswamy.in)
 - GitHub: [@ashutoshswamy](https://github.com/ashutoshswamy)
 - LinkedIn: [ashutoshswamy](https://linkedin.com/in/ashutoshswamy)
 - X (Twitter): [@ashutoshswamy_](https://x.com/ashutoshswamy_)
